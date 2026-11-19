@@ -1,0 +1,8 @@
+ligar o e1 to tux2 ao switch
+
+comandos para criar bridges no gtkterminal estão no slide 50 do proj2 description
+
+
+
+1. sudo ifconfig if_e1 172.16.111.1/24 para o tux2
+
