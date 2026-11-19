@@ -1,0 +1,20 @@
+(no pc da esquerda da bancada 11)
+
+configurar ips:
+sudo ifconfig if_e1 172.16.110.254/24 para o tux4
+sudo ifconfig if_e1 172.16.110.1/24 para o tux3
+
+por exemplo no tux3, dar ping ao 4:
+ping 172.16.110.254
+
+Como x.x.x.x temm 32 bits no total (cada x tem 8, porque varia entre 0 e 255 em binário), o /24 é o nº de bits para chegar á rede.
+Os restantes 8 para especificar o pc na rede. os nº 0 e 255 estão reservados, por isso escolhemos 1 e 254.
+
+
+'route -n' e 'arp -a' só para compreender o output
+
+
+Delete ARP table entries in tuxY3:
+arp -d 172.16.110.254
+
+

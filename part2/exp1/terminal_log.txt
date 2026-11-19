@@ -1,0 +1,203 @@
+netedu@Tux113:~$ sudo ifconfig if_e1 172.16.110.1/24
+netedu@Tux113:~$ ifconfig
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 82:95:d9:34:1e:17  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 198 overruns 0  carrier 0  collisions 0
+
+if_e1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.110.1  netmask 255.255.255.0  broadcast 172.16.110.255
+        ether ec:75:0c:c2:3c:7b  txqueuelen 1000  (Ethernet)
+        RX packets 4915  bytes 540235 (540.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2197  bytes 227093 (227.0 KB)
+        TX errors 0  dropped 9676 overruns 0  carrier 0  collisions 0
+
+if_e2: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether ec:75:0c:c2:51:6d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+if_mng: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.227.20.113  netmask 255.255.255.0  broadcast 10.227.20.255
+        inet6 fe80::76b2:e37b:bb32:e6b3  prefixlen 64  scopeid 0x20<link>
+        ether 5c:f9:dd:70:97:44  txqueuelen 1000  (Ethernet)
+        RX packets 3798820  bytes 316359094 (316.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 317129  bytes 37318486 (37.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 20  memory 0xf7e00000-f7e20000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 22444  bytes 2547044 (2.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 22444  bytes 2547044 (2.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+netedu@Tux113:~$ ping 172.16.110.254/24
+ping: 172.16.110.254/24: Name or service not known
+netedu@Tux113:~$ ping 172.16.110.254
+PING 172.16.110.254 (172.16.110.254) 56(84) bytes of data.
+64 bytes from 172.16.110.254: icmp_seq=1 ttl=64 time=0.273 ms
+64 bytes from 172.16.110.254: icmp_seq=2 ttl=64 time=0.212 ms
+64 bytes from 172.16.110.254: icmp_seq=3 ttl=64 time=0.216 ms
+^X64 bytes from 172.16.110.254: icmp_seq=4 ttl=64 time=0.227 ms
+64 bytes from 172.16.110.254: icmp_seq=5 ttl=64 time=0.240 ms
+64 bytes from 172.16.110.254: icmp_seq=6 ttl=64 time=0.230 ms
+64 bytes from 172.16.110.254: icmp_seq=7 ttl=64 time=0.233 ms
+64 bytes from 172.16.110.254: icmp_seq=8 ttl=64 time=0.231 ms
+64 bytes from 172.16.110.254: icmp_seq=9 ttl=64 time=0.226 ms
+64 bytes from 172.16.110.254: icmp_seq=10 ttl=64 time=0.224 ms
+64 bytes from 172.16.110.254: icmp_seq=11 ttl=64 time=0.208 ms
+64 bytes from 172.16.110.254: icmp_seq=12 ttl=64 time=0.226 ms
+64 bytes from 172.16.110.254: icmp_seq=13 ttl=64 time=0.230 ms
+64 bytes from 172.16.110.254: icmp_seq=14 ttl=64 time=0.227 ms
+64 bytes from 172.16.110.254: icmp_seq=15 ttl=64 time=0.215 ms
+64 bytes from 172.16.110.254: icmp_seq=16 ttl=64 time=0.221 ms
+64 bytes from 172.16.110.254: icmp_seq=17 ttl=64 time=0.228 ms
+64 bytes from 172.16.110.254: icmp_seq=18 ttl=64 time=0.229 ms
+64 bytes from 172.16.110.254: icmp_seq=19 ttl=64 time=0.228 ms
+64 bytes from 172.16.110.254: icmp_seq=20 ttl=64 time=0.230 ms
+64 bytes from 172.16.110.254: icmp_seq=21 ttl=64 time=0.225 ms
+64 bytes from 172.16.110.254: icmp_seq=22 ttl=64 time=0.208 ms
+64 bytes from 172.16.110.254: icmp_seq=23 ttl=64 time=0.199 ms
+64 bytes from 172.16.110.254: icmp_seq=24 ttl=64 time=0.229 ms
+64 bytes from 172.16.110.254: icmp_seq=25 ttl=64 time=0.228 ms
+64 bytes from 172.16.110.254: icmp_seq=26 ttl=64 time=0.227 ms
+64 bytes from 172.16.110.254: icmp_seq=27 ttl=64 time=0.228 ms
+64 bytes from 172.16.110.254: icmp_seq=28 ttl=64 time=0.228 ms
+64 bytes from 172.16.110.254: icmp_seq=29 ttl=64 time=0.231 ms
+64 bytes from 172.16.110.254: icmp_seq=30 ttl=64 time=0.232 ms
+64 bytes from 172.16.110.254: icmp_seq=31 ttl=64 time=0.213 ms
+64 bytes from 172.16.110.254: icmp_seq=32 ttl=64 time=0.188 ms
+64 bytes from 172.16.110.254: icmp_seq=33 ttl=64 time=0.216 ms
+64 bytes from 172.16.110.254: icmp_seq=34 ttl=64 time=0.221 ms
+64 bytes from 172.16.110.254: icmp_seq=35 ttl=64 time=0.229 ms
+64 bytes from 172.16.110.254: icmp_seq=36 ttl=64 time=0.166 ms
+64 bytes from 172.16.110.254: icmp_seq=37 ttl=64 time=0.239 ms
+64 bytes from 172.16.110.254: icmp_seq=38 ttl=64 time=0.216 ms
+64 bytes from 172.16.110.254: icmp_seq=39 ttl=64 time=0.221 ms
+64 bytes from 172.16.110.254: icmp_seq=40 ttl=64 time=0.227 ms
+64 bytes from 172.16.110.254: icmp_seq=41 ttl=64 time=0.220 ms
+64 bytes from 172.16.110.254: icmp_seq=42 ttl=64 time=0.232 ms
+64 bytes from 172.16.110.254: icmp_seq=43 ttl=64 time=0.244 ms
+64 bytes from 172.16.110.254: icmp_seq=44 ttl=64 time=0.231 ms
+64 bytes from 172.16.110.254: icmp_seq=45 ttl=64 time=0.227 ms
+64 bytes from 172.16.110.254: icmp_seq=46 ttl=64 time=0.222 ms
+64 bytes from 172.16.110.254: icmp_seq=47 ttl=64 time=0.230 ms
+64 bytes from 172.16.110.254: icmp_seq=48 ttl=64 time=0.232 ms
+64 bytes from 172.16.110.254: icmp_seq=49 ttl=64 time=0.227 ms
+64 bytes from 172.16.110.254: icmp_seq=50 ttl=64 time=0.230 ms
+64 bytes from 172.16.110.254: icmp_seq=51 ttl=64 time=0.233 ms
+64 bytes from 172.16.110.254: icmp_seq=52 ttl=64 time=0.226 ms
+64 bytes from 172.16.110.254: icmp_seq=53 ttl=64 time=0.236 ms
+64 bytes from 172.16.110.254: icmp_seq=54 ttl=64 time=0.232 ms
+64 bytes from 172.16.110.254: icmp_seq=55 ttl=64 time=0.223 ms
+64 bytes from 172.16.110.254: icmp_seq=56 ttl=64 time=0.235 ms
+64 bytes from 172.16.110.254: icmp_seq=57 ttl=64 time=0.234 ms
+64 bytes from 172.16.110.254: icmp_seq=58 ttl=64 time=0.202 ms
+64 bytes from 172.16.110.254: icmp_seq=59 ttl=64 time=0.232 ms
+64 bytes from 172.16.110.254: icmp_seq=60 ttl=64 time=0.214 ms
+64 bytes from 172.16.110.254: icmp_seq=61 ttl=64 time=0.215 ms
+64 bytes from 172.16.110.254: icmp_seq=62 ttl=64 time=0.207 ms
+64 bytes from 172.16.110.254: icmp_seq=63 ttl=64 time=0.212 ms
+64 bytes from 172.16.110.254: icmp_seq=64 ttl=64 time=0.201 ms
+64 bytes from 172.16.110.254: icmp_seq=65 ttl=64 time=0.235 ms
+64 bytes from 172.16.110.254: icmp_seq=66 ttl=64 time=0.228 ms
+64 bytes from 172.16.110.254: icmp_seq=67 ttl=64 time=0.230 ms
+64 bytes from 172.16.110.254: icmp_seq=68 ttl=64 time=0.224 ms
+64 bytes from 172.16.110.254: icmp_seq=69 ttl=64 time=0.192 ms
+64 bytes from 172.16.110.254: icmp_seq=70 ttl=64 time=0.229 ms
+64 bytes from 172.16.110.254: icmp_seq=71 ttl=64 time=0.225 ms
+64 bytes from 172.16.110.254: icmp_seq=72 ttl=64 time=0.238 ms
+^C
+--- 172.16.110.254 ping statistics ---
+72 packets transmitted, 72 received, 0% packet loss, time 72743ms
+rtt min/avg/max/mdev = 0.166/0.223/0.273/0.014 ms
+netedu@Tux113:~$ ^C
+netedu@Tux113:~$ ^C
+netedu@Tux113:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  projetos  Public  Templates  Videos
+netedu@Tux113:~$ ifconfig if_e1
+if_e1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.110.1  netmask 255.255.255.0  broadcast 172.16.110.255
+        ether ec:75:0c:c2:3c:7b  txqueuelen 1000  (Ethernet)
+        RX packets 5009  bytes 549771 (549.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2282  bytes 235620 (235.6 KB)
+        TX errors 0  dropped 9676 overruns 0  carrier 0  collisions 0
+
+netedu@Tux113:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         10.227.20.254   0.0.0.0         UG    100    0        0 if_mng
+10.227.20.0     0.0.0.0         255.255.255.0   U     100    0        0 if_mng
+172.16.110.0    0.0.0.0         255.255.255.0   U     0      0        0 if_e1
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+netedu@Tux113:~$ arp -a
+? (10.227.20.2) at bc:24:11:f5:a2:54 [ether] on if_mng
+? (10.227.20.213) at bc:24:11:6f:7d:9d [ether] on if_mng
+? (10.227.20.3) at bc:24:11:e7:5e:5b [ether] on if_mng
+? (10.227.20.8) at bc:24:11:ef:33:8e [ether] on if_mng
+? (10.227.20.111) at <incomplete> on if_mng
+? (10.227.20.173) at 04:92:26:66:b5:64 [ether] on if_mng
+? (10.227.20.114) at 5c:f9:dd:70:9c:4f [ether] on if_mng
+_gateway (10.227.20.254) at e4:8d:8c:20:25:c8 [ether] on if_mng
+? (172.16.110.254) at ec:75:0c:c2:3c:96 [ether] on if_e1
+? (10.227.20.4) at bc:24:11:79:82:65 [ether] on if_mng
+? (10.227.20.112) at 5c:f9:dd:70:8c:5b [ether] on if_mng
+netedu@Tux113:~$ arp -d 172.16.110.254
+SIOCDARP(dontpub): Operation not permitted
+netedu@Tux113:~$ sudo arp -d 172.16.110.254
+netedu@Tux113:~$ arp -a
+? (10.227.20.2) at bc:24:11:f5:a2:54 [ether] on if_mng
+? (10.227.20.213) at bc:24:11:6f:7d:9d [ether] on if_mng
+? (10.227.20.3) at bc:24:11:e7:5e:5b [ether] on if_mng
+? (10.227.20.8) at bc:24:11:ef:33:8e [ether] on if_mng
+? (10.227.20.111) at <incomplete> on if_mng
+? (10.227.20.173) at 04:92:26:66:b5:64 [ether] on if_mng
+? (10.227.20.114) at 5c:f9:dd:70:9c:4f [ether] on if_mng
+_gateway (10.227.20.254) at e4:8d:8c:20:25:c8 [ether] on if_mng
+? (10.227.20.4) at bc:24:11:79:82:65 [ether] on if_mng
+? (10.227.20.112) at 5c:f9:dd:70:8c:5b [ether] on if_mng
+netedu@Tux113:~$ sudo arp -d 172.16.110.254
+No ARP entry for 172.16.110.254
+netedu@Tux113:~$ arp -a
+? (10.227.20.2) at bc:24:11:f5:a2:54 [ether] on if_mng
+? (10.227.20.213) at bc:24:11:6f:7d:9d [ether] on if_mng
+? (10.227.20.3) at bc:24:11:e7:5e:5b [ether] on if_mng
+? (10.227.20.8) at bc:24:11:ef:33:8e [ether] on if_mng
+? (10.227.20.111) at <incomplete> on if_mng
+? (10.227.20.173) at 04:92:26:66:b5:64 [ether] on if_mng
+? (10.227.20.114) at 5c:f9:dd:70:9c:4f [ether] on if_mng
+_gateway (10.227.20.254) at e4:8d:8c:20:25:c8 [ether] on if_mng
+? (10.227.20.4) at bc:24:11:79:82:65 [ether] on if_mng
+? (10.227.20.112) at 5c:f9:dd:70:8c:5b [ether] on if_mng
+netedu@Tux113:~$ ping 172.16.110.254
+PING 172.16.110.254 (172.16.110.254) 56(84) bytes of data.
+64 bytes from 172.16.110.254: icmp_seq=1 ttl=64 time=0.373 ms
+64 bytes from 172.16.110.254: icmp_seq=2 ttl=64 time=0.184 ms
+64 bytes from 172.16.110.254: icmp_seq=3 ttl=64 time=0.224 ms
+64 bytes from 172.16.110.254: icmp_seq=4 ttl=64 time=0.221 ms
+64 bytes from 172.16.110.254: icmp_seq=5 ttl=64 time=0.233 ms
+64 bytes from 172.16.110.254: icmp_seq=6 ttl=64 time=0.239 ms
+64 bytes from 172.16.110.254: icmp_seq=7 ttl=64 time=0.209 ms
+64 bytes from 172.16.110.254: icmp_seq=8 ttl=64 time=0.219 ms
+64 bytes from 172.16.110.254: icmp_seq=9 ttl=64 time=0.239 ms
+64 bytes from 172.16.110.254: icmp_seq=10 ttl=64 time=0.188 ms
+64 bytes from 172.16.110.254: icmp_seq=11 ttl=64 time=0.196 ms
+64 bytes from 172.16.110.254: icmp_seq=12 ttl=64 time=0.212 ms
+64 bytes from 172.16.110.254: icmp_seq=13 ttl=64 time=0.231 ms
+64 bytes from 172.16.110.254: icmp_seq=14 ttl=64 time=0.233 ms
+^C
+--- 172.16.110.254 ping statistics ---
+14 packets transmitted, 14 received, 0% packet loss, time 13348ms
+rtt min/avg/max/mdev = 0.184/0.228/0.373/0.043 ms
